@@ -1,41 +1,36 @@
-# ─── Python ───────────────────────────────────────────────────────────
+# Environment variables - NEVER commit these
+.env
+*.env
+.env.*
+!.env.example
+
+# Python virtual environment
+venv/
+env/
+.venv/
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.egg
-*.egg-info/
+*.pyc
+
+# Distribution / build
 dist/
 build/
+*.egg-info/
 .eggs/
-*.spec
 
-# Virtual environments
-venv/
-.venv/
-env/
-ENV/
-
-# ─── Environment / Secrets ────────────────────────────────────────────
-.env
-.env.*
-*.env
-!.env.example
-!**/.env.example
-
-# ─── Uploads & generated data ─────────────────────────────────────────
+# Uploaded resume files (user data)
 backend/uploads/
+
+# Vector DB data (locally generated)
 backend/vector_db/
 
-# ─── Node (if added later) ────────────────────────────────────────────
-node_modules/
-npm-debug.log*
-yarn-error.log*
-
-# ─── OS & editor files ────────────────────────────────────────────────
+# IDE / OS
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
-.idea/
-.vscode/
-*.swp
-*.swo
+
+# Logs
+*.log
